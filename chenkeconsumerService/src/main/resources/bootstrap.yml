@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: service-consumer
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.83.132:8848
+        #命名空间ID,默认是public requirepass foobared
+        namespace: dev
+      config:
+        server-addr: 192.168.83.132:8848
+        #命名空间ID,默认是public
+        namespace: dev
+        file-extension: properties
+    sentinel:
+      transport:
+        dashboard: 192.168.83.132:8718
+      eager: false

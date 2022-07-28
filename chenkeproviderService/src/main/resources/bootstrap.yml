@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: service-provider
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.83.132:8848
+        #命名空间ID,默认是public
+        namespace: dev
+      config:
+        server-addr: 192.168.83.132:8848
+        #命名空间ID,默认是public
+        namespace: dev
+        #nacos dataid 必须和此处保持一致 file-extensionb
+        file-extension: yml
+    sentinel:
+      transport:
+        dashboard: 192.168.83.132:8718
+      eager: false
